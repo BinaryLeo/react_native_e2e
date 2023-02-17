@@ -9,6 +9,9 @@ module.exports = {
       setupTimeout: 120000
     }
   },
+  "artifacts": {
+    "rootDir": "./e2e/artifacts",
+  },
   apps: {
     'ios.debug': {
       type: 'ios.app',

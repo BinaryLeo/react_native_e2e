@@ -20,5 +20,6 @@ describe("E2E initial", () => {
     await element(by.id("input-email")).typeText("binaryleo@mail.com");
     await element(by.id("keyboard")).tap();
     await element(by.id("button-subscribe")).tap();
+    await device.takeScreenshot('snapshot-premium-plan-test');
   });
 });
