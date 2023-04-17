@@ -63,7 +63,6 @@ allprojects {
     repositories {
 				...
         maven {
-            // Artefados do Detox para o node_module
             url "$rootDir/../node_modules/detox/Detox-android"
         }
     }
@@ -76,7 +75,7 @@ allprojects {
 android {
     defaultConfig {
 				...
-        // Novas dependencias para rodar os testes.
+       // Dependencies.
         testBuildType System.getProperty('testBuildType', 'debug')
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
@@ -86,7 +85,7 @@ android {
 ```bash
 # In the same file add:
 dependencies {
-		// Novas dependencias para rodar os testes.
+		// Dependencies.
     androidTestImplementation('com.wix:detox:+') { transitive = true }
     androidTestImplementation 'junit:junit:4.12'
 }
@@ -97,7 +96,7 @@ dependencies {
 # Testing setup
 # Now we'll create a file called DetoxTest.java in the following path android/app/src/androidTest/java/com/[nome_do_package]/DetoxTest.java
 
-package com.package; // Trocar pelo no do Projeto.
+package com.package; // Change by your package name
 
 import com.wix.detox.Detox;
 import com.wix.detox.config.DetoxConfig;
